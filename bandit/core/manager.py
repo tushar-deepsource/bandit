@@ -225,7 +225,7 @@ class BanditManager(object):
         new_files_list = list(self.files_list)
 
         for count, fname in enumerate(self.files_list):
-            LOG.debug("working on file : %s", fname)
+            LOG.info("working on file : %s", fname)
 
             if len(self.files_list) > self.progress:
                 # is it time to update the progress indicator?
@@ -260,6 +260,7 @@ class BanditManager(object):
         :param flush: Whether to flush stderr after writing the message
         :return:
         '''
+        return
         if len(self.files_list) > self.progress and \
                 LOG.getEffectiveLevel() <= logging.INFO:
             sys.stderr.write(message)

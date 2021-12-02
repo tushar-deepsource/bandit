@@ -29,7 +29,7 @@ CONFIDENCE_DEFAULT = 'UNDEFINED'
 FALSE_VALUES = [None, False, 'False', 0, 0.0, 0j, '', (), [], {}]
 
 # override with "log_format" option in config file
-log_format_string = '[%(module)s]\t%(levelname)s\t%(message)s'
+log_format_string = '%(asctime)s [%(module)s]\t%(levelname)s\t%(message)s'
 
 # Directories to exclude by default
 EXCLUDE = (
